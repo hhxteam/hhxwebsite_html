@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页</title>
+    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/bootstrap-4.5.0-dist/js/bootstrap.js"></script>
+  
+</head>
+
+<body>
+    <!-- logo和导航菜单 -->
+    <div class="container ">
+        <div class="row">
+            <div class="col-xl-4">
+                <img class="logo_img" src="./images/logo.jpg" alt="" />
+            </div>
+            <div class="col-xl-8">
+                <ul class="nav justify-content-center  navList">
+                    <li ><a href="" style="text-decoration: none;
+                        color:rgb(36, 35, 35);
+                        margin: 25px;
+                        font-size: 16px;
+                        font-weight:500;letter-spacing: 1px;">网站首页</a></li>
+                    <li><a href=""style="text-decoration: none;
+                        color:rgb(36, 35, 35);
+                        margin: 25px;
+                        font-size: 16px;
+                        font-weight:500;letter-spacing: 1px;">新闻资讯</a></li>
+                    <li class="dropdown"><a href="./CasePresentation.html"class="dropbtn" style="text-decoration: none;
+                        color:rgb(36, 35, 35);
+                        margin: 25px;
+                        font-size: 16px;
+                        font-weight:500;letter-spacing: 1px;">业务范围</a>
+                     <ul  class="dropdown-content" >
+                        <li>
+                            <a href="">安防监控</a>
+                            <a href="">无线覆盖</a>
+                            <a href="">会议系统</a>
+                            <a href="">楼宇智控</a>
+                        </li>
+                    </ul>    
+                    </li>
+                    <li class="dropdown"><a href="./ScopeBusiness.HTML"class="dropbtn" style="text-decoration: none;
+                        color: rgb(36, 35, 35);
+                        margin: 25px;
+                        font-size: 16px;
+                        font-weight:500;letter-spacing: 1px;" >案例展示</a>
+                        <ul  class="dropdown-content" >
+                            <li>
+                                <a href="">金融行业</a>
+                                <a href="">物流仓储</a>
+                                <a href="">政府机关</a>
+                                <a href="">智慧园区</a>
+                            </li>
+                        </ul>    
+                    </li>
+                    <li class="dropdown"><a class="dropbtn" href="./AboutUs.html" style="text-decoration: none;
+                        color:rgb(36, 35, 35);
+                        margin: 25px;
+                        font-size: 16px;
+                        font-weight:500;letter-spacing: 1px;">关于我们</a>
+                       <ul  class="dropdown-content" >
+                           <li>
+                               <a href="">公司简介</a>
+                               <a href="">企业文化</a>
+                               <a href="">企业资质</a>
+                               <a href="">联系我们</a>
+                           </li>
+                       </ul>
+                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/banner.png" class="d-block w-100" style="height: 800px" alt="..." />
+            </div>
+            <div class="carousel-item">
+                <img src="./images/timg1.jfif" class="d-block w-100" style="height: 800px" alt="..." />
+            </div>
+            <div class="carousel-item">
+                <img src="./images/301.png" class="d-block w-100" style="height: 800px" alt="..." />
+            </div>
+            <div class="carousel-item">
+                <img src="./images/300.png" class="d-block w-100" style="height: 800px" alt="..." />
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+   <!-- 关于我们 -->
+    <div style="background-color: rgb(245, 245, 245); padding-top: 100px ; height: 800px;">
+        <div class="col-xl-12 text-center" style="padding-bottom: 40px;">
+            <h1 style="
+           
+            font-size: 40px;
+            font-family: Verdana;
+            color: rgb(51, 51, 51);
+            font-weight: 600;
+            letter-spacing: 2px;
+          ">
+                关于我们
+            </h1>
+            <p style="font-size: 28px; color: rgb(232, 232, 229)">About us</p>
+        </div>
+        <div class="container">
+        <div class="row justify-content-lg-center">
+            <div class="col col-sm-6">
+                <h3>武汉鸿海鑫科技有限公司</h3>
+                <div style="
+              width: 50px;
+              height: 20px;
+              border-bottom: 3px solid rgb(0, 56, 134);
+            "></div>
+                <p style="
+              text-indent: 40px;
+              padding-top: 20px;
+              letter-spacing: 3px;
+              text-align: justify;
+              color: rgb(156, 160, 158);
+            ">
+                   武汉鸿海鑫是一家以弱电安防、系统集成、综合布线和智能化为核心的综 合型弱电工程、服务商。 可提供综合布线、
+                   设备运维、 IT咨询服务等在内的一站式、 全方位IT解决方案。
+                   面向全国提供弱电、 智能化管理和运行保障。 “鸿海鑫”秉承 
+                   “真材实料，真心诚意”的经营理念， 始终以 “新IT，新世界” 为使命
+                  ......
+                </p>
+                <div class="btn" style="display: block; text-align: left;padding-left: 0;margin-top: 115px; ">
+                    <a href="./AboutUs.html" class="btn btn-outline-primary btn-lg" 
+                    style="font-size: 20px; 
+                    width: 150px; 
+                    border: 1px solid rgb(33, 22, 189);
+                     color: rgb(33, 22, 189);
+                    font-family:'Courier New', Courier, monospace" >了解更多</a>
+                </div>
+            </div>
+            <div class="col col-sm-6 text-md-right">
+                <img src="./images/100.png" style="margin-left: 10px; width: 100%; height: 400px; " alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+         <!-- 数据实时线 -->
+        <div class="container data">
+            <div class=" row  p-2   bg-white rounded">
+                <div class="col-xl-3" >
+                    <h1 style="font-size: 50px; font-weight: 100;">2000<sup>+</sup></h1>
+                    <p>成立鸿海鑫</p>
+                </div>
+                <div class="col-xl-3">
+                    <h1 style="font-size: 50px; font-weight: 100;">675<sup>+</sup></h1>
+                    <p>客户数量</p>
+                </div>
+                <div class="col-xl-3">
+                    <h1 style="font-size: 50px; font-weight: 100;">73<sup>+</sup></h1>
+                    <p>项目覆盖范围</p>
+                </div>
+                <div class="col-xl-3">
+                    <h1 style="font-size: 50px; font-weight: 100;">64<sup>+</sup></h1>
+                    <p>覆盖全国多个省市</p>
+                </div>
+            </div>
+        </div>
+        <!-- 新闻资讯 -->
+        <div class=" container-fluid" >
+            <div class="col-xl-12 text-center" style="margin-bottom: 50px;">
+                <h1 style="      
+                font-size: 40px;
+                font-family: Verdana;
+                color: rgb(51, 51, 51);
+                font-weight: 600;
+                letter-spacing: 2px;
+              ">
+                    新闻资讯
+                </h1>
+                <p style="font-size: 28px; color: rgb(232, 232, 229)">News center</p>
+            </div>
+            <div class="container" >
+            <div class="row">
+            <div class="col-xl-6" style="height: 600px; background-color: rgb(245, 245, 245);padding:30px;">
+                <div>
+                    <span>11-03</span>
+                </div>
+                <h4 style="font-size: 18px; font-weight: 900;">第二十届中国国际建筑智能化峰会在武汉举办</h4>
+                <p style="text-align: justify; text-indent: 40px;color: rgb(170, 169, 169);"  >
+                    11月12日，为深层次落实发展趋势AIoT和5G的国家战略发展规划，
+                    全方位推动中西部地区智能化全产业链结合沟通交流，
+                    由千家智客举办，支持企业为我国建博会......
+                    <a href="" style="float: right; font-size: 14px;">了解更多</a>
+                </p>
+              
+                <img src="./images/137.jpg"  width="100%" alt="">
+                <div class="btn" style="display: block; text-align: center; padding-top: 50px; ">
+                    <a href="https://www.hao123.com/" class="btn btn-outline-primary btn-lg" style="width: 150px; border: 1px solid rgb(33, 22, 189); color: rgb(33, 22, 189);font-family:'Courier New', Courier, monospace" >了解更多</a>
+                </div>
+              </div>
+              
+            <div class="col-xl-6  news"> 
+                <div >
+                <ul>
+                <li><a href="">2020安博会解读安防趋势</a> 
+                  <span>08-04</span>
+                </li>
+                <p>
+                    深圳世博会每两年于10月28日至31日在深圳举行。
+
+                    一、2020年安全趋势
+                    
+                    2018年，安防企业总收入6900亿元，
+                    增长14%中国安防行业协会发布2018年安防行业统计数据:截至2018年底......
+              </ul>
+            </div>
+              <div >
+              <ul>
+                <li><a href="">武汉客厅方舱医院逐步恢复原有业态</a> <span>08-04</span>
+                </li>
+                <p>
+                  当日，武汉客厅方舱医院完成使命，正在进行拆除作业并逐步恢复原有业态。
+                  据了解，武汉客厅方舱医院由卓尔旗下物业武汉客厅....</p>
+              </ul>
+            </div>
+              <div>
+              <ul>
+                <li><a href="">武汉客厅方舱医院逐步恢复原有业态</a> <span>08-04</span>
+                </li>
+                <p>
+                  当日，武汉客厅方舱医院完成使命，正在进行拆除作业并逐步恢复原有业态。
+                  据了解，武汉客厅方舱医院由卓尔旗下物业武汉客厅....</p>
+              </ul>
+            </div>
+            </div>
+            </div>
+        </div>
+</div>
+<!-- 业务范围 -->
+      <div class="container-filud  business" >
+        <div class=" text-center">
+            <h1>
+                业务范围
+            </h1>
+            <p style="font-size: 28px;
+            color: rgb(232, 232, 229);">Cope of business</p>
+        </div>
+        <div class="container " style="margin-top: 50px;">
+           <div class="row businessAd">
+            <div class="col card" >
+                      <img src="./images/200.png"  class="card-img-top" alt="">
+                <div class="card-body">
+                      <h3 class="card-title">智能化园区</h3>
+                      <p class="card-text">园区三维仿真系统、物联网平台建设以及系统集成......
+                    </p>
+                   
+                 </div>
+                 <div>
+                    <a href="" >-></a>
+                    </div>
+            </div>
+            <div class="col card"  style="background-color: white ;"> 
+                <img src="./images/201.png"  class="card-img-top" alt="">
+                       <div class="card-body">
+                      <h3 class="card-title">金融行业</h3>
+                      <p class="card-text">运营设备、银亭项目、
+                          机房UPS以及一二级支行机房建设等弱电项目工程......
+                      </p>
+                    </div>
+                    <div>
+                        <a href="" >-></a>
+                        </div>
+            </div>
+            <div class="col card" style="background-color: white ;">
+                <img src="./images/203.jpg"  class="card-img-top" alt="">
+                <div class="card-body">
+               <h3 class="card-title">物流仓储</h3>
+               <p class="card-text">物流产业园提供弱电工程解决方案实施和服务......</p>
+              
+            </div>
+            <div>
+                <a href="./CasePresentation.html" >-></a>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="btn" style="display: block; text-align: center; padding-top: 50px; ">
+        <a href="./ScopeBusiness.HTML" class="btn btn-outline-primary btn-lg" 
+        style="width: 150px; border: 1px solid white; color: white;
+        font-family:'Courier New', Courier, monospace" " >了解更多</a>
+    </div>
+ </div>
+    <!-- 案例展示 -->
+<div class=" container showEx">
+    <div class=" text-center showTitle">
+            <h1>案例展示</h1>
+            <p>Case presentation</p>
+    </div>
+     <div class="row showCard">
+        <div class=" col  ">
+            <img src="./images/202.jpg"  class="card-img-top img-fluid" alt="">
+                    <div class="card-body">
+                      <h3 class="card-title"><a href="">苏宁南京物流基地</a> </h3>
+                      <p class="card-text">这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+                    </div>       
+        </div>
+        <div class=" col">
+            <img src="./images/205.jpg"  class="card-img-top" alt="">
+            <div class="card-body">
+              <h3 class="card-title"><a href=""> 苏宁徐州广场店</a></h3>
+              <p class="card-text">这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+            </div>
+         
+        </div>
+        <div class=" col">
+            <img src="./images/206.png"  class="card-img-top" alt="">
+            <div class="card-body">
+                <h3 class="card-title"><a href="">九州通智慧物流园</a></h3>
+              <p class="card-text">这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+            </div>
+         
+        </div>
+        <div class=" col">
+            <img src="./images/207.png"  class="card-img-top" alt="">
+            <div class="card-body">
+                <h3 class="card-title"><a href="">斗鱼嘉年华</a></h3>
+              <p class="card-text">2018年4月29日到5月1日，首届国际武汉斗鱼直播节在武汉开幕...</p>
+            </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+            <img src="./images/208.jpg"  class="card-img-top" alt="">
+            <div class="card-body">
+                <h3 class="card-title"><a href="">中百仓储</a></h3>
+              <p class="card-text">2018年承接武汉中百仓储竹叶山店弱电工程...</p>
+            </div>     
+        </div>
+        <div class="col">
+            <img src="./images/209.jpg"  class="card-img-top" alt="">
+            <div class="card-body">
+                <h3 class="card-title"><a href="">武商量贩超级生活馆</a></h3>
+              <p class="card-text">2020年承接武商量贩超级生活馆国际广场店综合安防监控...</p>
+            </div>       
+        </div>
+        <div class="col">
+            <img src="./images/210.jpg"  class="card-img-top" alt="">
+            <div class="card-body">
+                <h3 class="card-title"><a href="">中冶黄石公园</a></h3>
+              <p class="card-text">2019年承接黄石公园住宅项目弱电安防项目...</p>
+            </div>   
+        </div>
+        <div class="col">
+            <img src="./images/211.jpg"  class="card-img-top" alt="">
+            <div class="card-body">
+                <h3 class="card-title"><a href="">百联奥特莱斯</a></h3>
+              <p class="card-text">承接百联奥特莱斯网络维保、无线AP、弱电机房建设...</p>
+            </div>
+        </div>
+     </div>
+     <div class="btn" style="display: block; text-align: center; padding-top: 50px; ">
+        <a href="./CasePresentation.html" class="btn btn-outline-primary btn-lg" 
+        style="width: 150px; border: 1px solid rgb(33, 22, 189); 
+        color: rgb(33, 22, 189);
+        font-family:'Courier New', Courier, monospace">了解更多</a>
+    </div>
+</div>
+<!-- 页面底部样式 -->
+<div class=" container-fluid upSide">
+    <div class=" container  upSideContent"  >
+      <div class=" row ">
+           <div class="col-sm-6 rowTheme">
+            <h1>联系我们</h1>
+            <p>Contact us</p>
+           </div>
+           <div class="col-sm-6 rowContent">
+            <h1>武汉鸿海鑫科技有限公司</h1>
+            <div>
+            <p>地址：武汉市硚口区园博园南路9号汉江湾3C-1层</p>
+            <p>邮编：43000</p>
+            <p>电话：027-85850275 </p>
+            <p>邮箱：hhx@greatsea.net.cn</p>
+           </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- 脚注 -->
+<div class=" container-fluid  end" >
+    <div class=" row endBottom">
+        <div class=" col text-right ">
+            <p >技术支持：武汉鸿海鑫科技有限公司</p>
+           </div>
+           <div class=" col text-left">
+            <p>Copyright@2018-2020 <img src="./images/204.png" ><a href="http://www.beian.gov.cn/portal/registerSystemInfo"target="_blank">鄂公网安备 42010302001751号</a> </img></p>
+           </div>
+    </div>
+  </div>
+ <script>
+     $(".carousel").carousel({
+         interval:3000
+     })
+ </script>
+</body>
+</html>

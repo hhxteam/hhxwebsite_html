@@ -1,0 +1,27 @@
+.list{
+    list-style: square url(./images/03.png);
+}
+
+.list li{
+    width: 300px;
+    margin:0px 0px 30px 20px;
+   
+    
+}
+.list li a{
+    color: rgb(180, 176, 176);
+    margin-left: 20px;
+    font-size: 15px;
+
+}
+
+.list li a:hover{
+    text-decoration: none;
+    color: blue;
+  
+
+}
+
+.jj{
+    padding:25px;
+}

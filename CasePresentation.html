@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>案例展示</title>
+    <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./aboutus.css">
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/bootstrap-4.5.0-dist/js/bootstrap.js"></script>
+</head>
+<body>
+    <!-- logo和导航菜单 -->
+    <div class="container ">
+        <div class="row">
+            <div class="col-xl-4">
+                <img class="logo_img" src="./images/logo.jpg" alt="" />
+            </div>
+            <div class="col-xl-8 ">
+                <ul class="nav justify-content-center">
+                    <li><a href="./index.html" style="text-decoration: none;
+                        color:rgb(36, 35, 35);
+                        margin: 25px;
+                        font-size: 16px;
+                        font-weight:500;letter-spacing: 1px;">网站首页</a></li>
+                    <li><a href="" style="text-decoration: none;
+                        color:rgb(36, 35, 35);
+                        margin: 25px;
+                        font-size: 16px;
+                        font-weight:500;letter-spacing: 1px;">新闻资讯</a></li>
+                    <li class="dropdown">
+                        <a href="./ScopeBusiness.HTML" style="text-decoration: none;
+                        color:rgb(36, 35, 35);
+                        margin: 25px;
+                        font-size: 16px;
+                        font-weight:500;letter-spacing: 1px;">业务范围</a>
+                    </li>
+                    <li><a href="" style="text-decoration: none;
+                        color:rgb(36, 35, 35);
+                        margin: 25px;
+                        font-size: 16px;
+                        font-weight:500;letter-spacing: 1px;">案例展示</a></li>
+                    <li><a href="./AboutUs.html" style="text-decoration: none;
+                        color:rgb(36, 35, 35);
+                        margin: 25px;
+                        font-size: 16px;
+                        font-weight:500;letter-spacing: 1px;">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>   
+       <!--页面图片  -->
+       <div class="container-fluid "  style="height: 220px; background-image:url(./images/50.png)">
+         <div class="container " style="height:220px; ">
+           <div class="row">
+               <div class="col" style="margin-top: 60px;">
+                <h1 style="
+                font-size: 30px;
+                font-family: Verdana;
+                color:white;
+                font-weight:normal;
+                letter-spacing: 2px;
+              ">
+                    案例展示
+                </h1>
+                <p style="font-size: 20px; color: rgb(232, 232, 229)">Case presentation
+
+                </p>
+               </div>
+           </div>
+         </div>
+       </div>
+       <div class="container">
+            <div class="row">
+                <!-- 左侧导航列表 -->
+              <div class="col-md-4" style="border-right:1px solid #f3f1f1;padding: 50px;">
+            <ul id="myTab"  class="nav nav-tabs list" >
+            <li><a href="#jieshao" data-toggle="tab">金融行业</a></li>
+            <li><a href="#wenhua"  data-toggle="tab">物流仓储</a></li>
+            <li><a href="#zizhi"   data-toggle="tab">政府机关</a></li>
+            <li><a href="#us"      data-toggle="tab">智慧园区</a></li>
+            </ul>
+              </div>
+              <!-- 金融行业 -->
+              <div class="col-md-8 tab-content" style="height: 800px;">
+                    <div class="tab-pane fade in " id="jieshao">
+                    <div class="col-xs-offset-12 ">
+                     
+                    </div>
+                    <div class="col-xs-offset-12" style="padding-top: 25px;">
+                        <!-- 图片自适应 宽度设置100% -->
+                      
+                    </div>
+                </div>
+                    <!-- 物流仓储 -->
+                    <div class=" tab-pane fade " id="wenhua">
+                        <p>当地时间10月12日，世卫组织举行新冠肺炎例行发布会，
+                            世卫组织首席科学家苏米娅·斯瓦米纳坦表示，
+                            全球各地的新冠疫苗临床试验进展都令人鼓舞，
+                            目前约有40种疫苗已处于临床试验中，其中10种已进入三期临床试验，
+                            预计最早于今年12月到明年初有疫苗公布数据，
+                            预计未来6～12个月将有多个疫苗临床试验出结果。
+                            （总台记者 朱赫）</p>
+                    </div>
+                    <!-- 政府机关 -->
+                    <div class=" tab-pane fade" id="zizhi">
+                        <img src="./images/组 13.png" alt="">
+                    </div>
+                    <!-- 智慧园区 -->
+                    <div class=" tab-pane fade" id="us" style="padding-top: 30px;">
+                       
+                    
+                       
+                    </div>         
+              </div>
+            </div>
+       </div>
+       <div class=" container-fluid">
+           <!-- 垂直居中 使用line-height与父元素相同高度，然后再用text-align：center -->
+           <div class="row " style="background-color: black;line-height: 50px;text-align: center; height: 50px;margin-top: 20px; color: white;">
+               <div class="col-md-6 text-md-right" >
+                <p >技术支持：武汉鸿海鑫科技有限公司</p>
+               </div>
+               <div class="col-md-6">
+                <p >Copyright@All Rights Reserved</p>
+               </div>
+           </div>
+       </div>
+       <script>
+        $(function () {
+            $('#myTab li:eq(0) a').tab('show');
+        });
+    </script>
+</body>

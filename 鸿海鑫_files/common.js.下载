@@ -1,0 +1,334 @@
+var commonFun = function () {
+    new Swiper('#certImgBox', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 'auto',
+        paginationClickable: true,
+        spaceBetween: 5
+    });
+    var windowW = $(window).width();
+    var slidesPerView = 1200 > windowW ? 1 : 3;
+    this.bannerSwiperJson = {
+        autoplay: 3000,
+        initialSlide: 0,
+        nextButton: ".arrowBtnR",
+        prevButton: ".arrowBtnL",
+        loop: true
+    };
+    this.swiperJson = $.extend({}, this.bannerSwiperJson, {
+        slidesPerView: slidesPerView,
+        pagination: ".pagination",
+        paginationClickable: true
+    });
+    this.gotoTopType = false;
+    this.isVerticalScreen = true;
+    this.isIE = false
+};
+commonFun.prototype = {
+    init: function () {
+        this.bundle().setNavActive().gotoTopToggle().verifyIE();
+        return this
+    }, bundle: function () {
+        var _this = this;
+        $(".head").on("click", ".webNavBtn", function () {
+            var $this = $(this);
+            $webNav = $(".webNav");
+            isOpen = $this.hasClass("iconshoujiduanguanbianniu");
+            if (isOpen) {
+                $this.removeClass("iconshoujiduanguanbianniu").addClass("iconshoujicaidan");
+                $webNav.removeClass("active")
+            } else {
+                $this.addClass("iconshoujiduanguanbianniu").removeClass("iconshoujicaidan");
+                $webNav.addClass("active")
+            }
+        });
+        $(".webNav").click(function () {
+            $(".head .webNavBtn").click()
+        });
+        $(".nav li").hover(function () {
+            $(this).css("color", "#fa0");
+            $(this).find("div").css("backgroundPosition", -54)
+        }, function () {
+            $(this).css("color", "#282828");
+            $(this).find("div").css("backgroundPosition", 0)
+        });
+        $(".contantNumBox").on("click", ".gotoTop", function () {
+            $("body,html").animate({scrollTop: 0}, 500)
+        }).on("mouseover mouseout", ".gotoTop", function (e) {
+            var $gotoTopBox = $(".gotoTop");
+            $gotoTopBox.find(".gotoTopIcon").toggle().end().find(".gotoTopMsg").toggle()
+        }).on("mouseover mouseout", ".contantNum", function (e) {
+            var $num = $(".contantNum .num");
+            var isShow = $num.css("display");
+            var contantNumW = "none" == isShow ? "170px" : "50px";
+            $(".contantNum").find(".num").toggle().end().css("width", contantNumW)
+        });
+        $(".foot .certImgBox").on("click", "img", function () {
+            $(".shade").show();
+            var file = "/assets/v5/images/" + $(this).attr("name");
+            var oImg = document.createElement("img");
+            oImg.src = file;
+            $(".cerPop").empty().append(oImg);
+            $(".cerPop").fadeIn();
+            $(".shade").show()
+        });
+		$(".navDetail").on("click", "img", function (event,childSelector) {
+			event.preventDefault();
+			event.stopPropagation();
+			
+			console.log(event.currentTarget)
+			$(event.currentTarget).addClass('zoom');
+			zoom($(this)[0], $(this).src, 0, 0, 0)
+		});
+        $(".cerPop").on("click", function () {
+            $(".shade").hide();
+            $(".cerPop").hide()
+        });
+        $(".footWechat").hover(function () {
+            $(this).find("img").css("display", "block")
+        }, function () {
+            $(this).find("img").css("display", "none")
+        });
+        $(".hrVideo").on("click", ".playBtn", function (e) {
+            _this.stopPropagat(e);
+            var source = $(this).data("url") || "http://down5.huorong.cn/doc/hr50/hr50-read-in-three-minutes.mp4";
+            var sourceHtml = document.createElement("source");
+            sourceHtml.src = source;
+            var hasVideo = !!(document.createElement("video").canPlayType);
+            if (!!hasVideo) {
+                $(".hrVideo").find(".videoModal").find("#videoBox").attr("src", source).end().show();
+                if (_this.isVerticalScreen) {
+                    $(".videoModal .modal-container").css("width", "80%").css("height", "auto")
+                } else {
+                    $(".videoModal .modal-container").css("width", "auto").css("height", "80%")
+                }
+                $("#videoBox").get(0).play()
+            } else {
+                $(".incompatibleBox").find(".incompatible").attr("href", source).end().show()
+            }
+        }).on("click", ".videoModal,.videoModal .close", function () {
+            $(".hrVideo ").find(".videoModal").hide().end().find(".videoBox").get(0).pause()
+        });
+        $(".incompatibleBox").click(function () {
+            $(".incompatibleBox").hide()
+        }).on("click", ".incompatible", function (e) {
+            _this.stopPropagat(e)
+        });
+        $(document).on("click", ".dataUrl", function () {
+            var dataUrl = $(this).data("url");
+            window.open(dataUrl)
+        }).on("click", ".hrBtn", function (e) {
+            common.stopPropagat(e)
+        });
+        $(".likeWrapper").on("click", ".likeBox", function () {
+            $(this).find(".iconfont").addClass("active")
+        });
+        $(".reviewBody").on("click", ".likeNum", function () {
+            $(this).find(".iconfont").addClass("active")
+        });
+        (function () {
+            window.onload = function () {
+                document.addEventListener("gesturestart", function (e) {
+                    e.preventDefault()
+                });
+                document.addEventListener("dblclick", function (e) {
+                    e.preventDefault()
+                });
+                document.addEventListener("touchstart", function (event) {
+                    if (event.touches.length > 1) {
+                        event.preventDefault()
+                    }
+                });
+                var lastTouchEnd = 0;
+                document.addEventListener("touchend", function (event) {
+                    var now = (new Date()).getTime();
+                    if (now - lastTouchEnd <= 300) {
+                        event.preventDefault()
+                    }
+                    lastTouchEnd = now
+                }, false)
+            }
+        })();
+        return this
+    }, verifyWindow: function () {
+        var $wind = $(window);
+        var windH = $wind.height();
+        var windW = $wind.width();
+        this.isVerticalScreen = (windH / windW * 100) >= 100 ? true : false;
+        return this
+    }, verifyIE: function () {
+        var DEFAULT_VERSION = 9;
+        var ua = navigator.userAgent.toLowerCase();
+        var isIE = ua.indexOf("msie") > -1;
+        var safariVersion;
+        if (isIE) {
+            safariVersion = ua.match(/msie ([\d.]+)/)[1]
+        }
+        if (safariVersion <= DEFAULT_VERSION) {
+            this.isIE = true;
+            $(document).find(".swiperCss,.swiperJs").remove();
+            console.log("系统检测到您正在使用ie8以下内核的浏览器，不能实现完美体验，请更换或升级浏览器访问！")
+        }
+        return this
+    }, setNavActive: function () {
+        if (1200 <= $(window).width()) {
+            var a = window.location.pathname;
+            a = a.substr(a.indexOf("/") + 1);
+            if (a.indexOf("/") != -1) {
+                a = a.substr(0, a.indexOf("/"))
+            }
+            if (a.indexOf(".") != -1) {
+                a = a.substr(0, a.indexOf("."))
+            }
+            a = a || "index";
+            $(".hdnavHome").parent().removeClass("active");
+            $("." + a).addClass("active")
+        }
+        return this
+    }, setEllipsis: function (rows, dom) {
+        if ("-webkit-line-clamp" in document.documentElement.style) {
+        } else {
+            var domBox = dom || document;
+            var $ellipsisArr = $(domBox).find(".ellipsis");
+            console.log($ellipsisArr.length);
+            $.each($ellipsisArr, function () {
+                var $_this = $(this);
+                var lineH = parseInt($_this.css("line-height"));
+                var boxH = $_this.height();
+                var maxH = lineH * rows;
+                console.log(maxH);
+                if (maxH < boxH) {
+                    $_this.addClass("ellipsis_over");
+                    $_this.css("height", maxH)
+                } else {
+                    $_this.removeClass("ellipsis_over")
+                }
+            })
+        }
+        return this
+    }, stopPropagat: function (e) {
+        if (e && e.stopPropagation) {
+            e.stopPropagation()
+        } else {
+            window.event.cancelBubble = true
+        }
+    }, gotoTopToggle: function () {
+        if ($(document).scrollTop()) {
+            $(".gotoTop").show()
+        } else {
+            $(".gotoTop").hide()
+        }
+        return this
+    }, gotoTop: function () {
+        var _this = this;
+        $(window).on("scroll", function () {
+            _this.gotoTopToggle()
+        });
+        return this
+    }, videoBoxScrollToggle: function (id, timer) {
+        $(id).mouseover(function () {
+            timer.stopAutoplay()
+        }).mouseout(function () {
+            timer.startAutoplay()
+        });
+        return this
+    }, setIntroduceAnime: function (obj, len, start, interval) {
+        var _scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        var screenHeight = $(window).height();
+        var docHeight = screenHeight + _scrollTop;
+        for (var i = 0; i < len; i++) {
+            if (docHeight >= (start + (i * interval))) {
+                $(obj).eq(i).addClass("active")
+            }
+        }
+        return this
+    }, swiperBtn: function (obj, timer) {
+        var prev = prev || ".arrowBtnL";
+        var next = next || ".arrowBtnR";
+        $(obj).on("click", prev, function (e) {
+            e.preventDefault();
+            if (timer.slidePrev) {
+                timer.slidePrev()
+            } else {
+                timer.swipePrev()
+            }
+        }).on("click", next, function (e) {
+            e.preventDefault();
+            if (timer.slideNext) {
+                timer.slideNext()
+            } else {
+                timer.swipeNext()
+            }
+        });
+        return this
+    }, setVideoShow: function () {
+        var _this = this;
+        $(window).on("resize", function () {
+            var windowW = $(window).width();
+            if (1200 > windowW) {
+                _this.videoView = 1
+            }
+        });
+        return this
+    }, getUserAgent: function () {
+        var reg = "/phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone/";
+        if (navigator.userAgent.match(reg)) {
+            //个人版
+            $(".personBanner .container .download_m .downLoadBtn-m").html("请在PC端下载使用");
+            $(".personBanner .container .download_m .downLoadBtn-m").css("width","auto");
+            $(".personBanner .container .download_m .downLoadBtn-m").attr("href","javascript:void(0);");
+            //企业版
+            $(".essBanner .btnBox .btn.userLogin").css("display","none");
+        } else {
+            //个人版
+            $(".personBanner .container .download_m .downLoadBtn-m").html("免费下载");
+            $(".personBanner .container .download_m .downLoadBtn-m").css("width","150px");
+            $(".personBanner .container .download_m .downLoadBtn-m").attr("href","/downloadfullv5.html");
+            //企业版
+            $(".essBanner .btnBox .btn.userLogin").css("display","inline-block");
+
+        }
+        return this
+    },
+};
+var scrollLogo = function () {
+    this.logoNum = 10
+};
+scrollLogo.prototype = {
+    setScroll: function (id, timer, speed) {
+        var speed = speed || -1;
+        var oDiv = document.getElementById(id);
+        var oUl = oDiv.getElementsByTagName("ul")[0];
+        var oLi = oUl.getElementsByTagName("li");
+        oUl.innerHTML += oUl.innerHTML;
+        oUl.style.width = 123 * 2 * oLi.length + "px";
+        clearInterval(timer);
+        function starMove() {
+            timer = setInterval(function () {
+                oUl.style.left = oUl.offsetLeft + speed + "px";
+                if (-oUl.offsetLeft >= oUl.offsetWidth / 2) {
+                    oUl.style.left = "0px"
+                } else {
+                    if (oUl.offsetLeft > 0) {
+                        oUl.style.left = -oUl.offsetWidth / 2 + "px"
+                    }
+                }
+            },100)
+        }
+
+        starMove();
+        oDiv.onmouseover = function () {
+            clearInterval(timer)
+        };
+        oDiv.onmouseout = function () {
+            starMove()
+        }
+    }, setPartnerScroll: function () {
+        this.setScroll("partnerUlBox1", partnerUlBox1);
+        this.setScroll("partnerUlBox2", partnerUlBox2, 2);
+        this.setScroll("partnerUlBox3", partnerUlBox3, 2);
+        this.setScroll("partnerUlBox4", partnerUlBox4);
+        return this
+    },
+};
+var common = new commonFun();
+common.init().gotoTop().getUserAgent();

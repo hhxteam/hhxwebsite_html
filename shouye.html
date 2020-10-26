@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+
+  <link rel="stylesheet" href="font.css" />
+  <link rel="stylesheet" href="lunbo.css" />
+  <link rel="stylesheet" href="anli.css" />
+  <link rel="stylesheet" href="dropdown.css" />
+  <link rel="stylesheet" href="btn.css" />
+  <title>鸿海鑫科技</title>
+  <script type=" text/javascript" src="jquery-3.4.1.min.js"></script>
+</head>
+<script type="text/javascript">
+  //自动播放轮播图
+  $(function () {
+    var index = 0; //标记当前图片索引
+    var a = setInterval(function () {
+      if (index == $(".box-img").length - 1) {
+        index = 0;
+        $(".box-img").css("opacity", "0");
+        $(".box-img").eq(index).css("opacity", "1");
+      } else {
+        index++;
+        $(".box-img").css("opacity", "0");
+        $(".box-img").eq(index).css("opacity", "1");
+      }
+    }, 3000);
+    // 设置点击左图标时手动切换轮播图
+    $(".box-left").click(function () {
+      clearInterval(a);
+      if (index == 0) {
+        index = $(".box-img").length - 1;
+        $(".box-img").css("opacity", "0");
+        $(".box-img").eq(index).css("opacity", "1");
+      } else {
+        index--;
+        $(".box-img").css("opacity", "0");
+        $(".box-img").eq(index).css("opacity", "1");
+      }
+    });
+    // 设置点击又图标时手动切换轮播图
+    $(".box-right").click(function () {
+      clearInterval(a);
+      if (index == $(".box-img").length - 1) {
+        index = 0;
+        $(".box-img").css("opacity", "0");
+        $(".box-img").eq(index).css("opacity", "1");
+      } else {
+        index++;
+        $(".box-img").css("opacity", "0");
+        $(".box-img").eq(index).css("opacity", "1");
+      }
+    });
+  });
+</script>
+
+<body>
+  <div>
+    <div class="web_head">
+      <ul style="background-color: white;">
+        <img class="logo-img" src="./images/logo.jpg" />
+        <li class="dropdown">
+          <a href="#" class="dropbtn">关于我们</a>
+          <div class="dropdown-content">
+            <a href="./aboutus.html">公司简介</a>
+            <a href="./aboutus.html">企业文化</a>
+            <a href="#">企业资质</a>
+            <a href="#">联系我们</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">案例展示</a>
+          <div class="dropdown-content">
+            <a href="">金融行业</a>
+            <a href="">物流仓储</a>
+            <a href="">政府机关</a>
+            <a href="">智慧园区</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">业务范围</a>
+          <div class="dropdown-content">
+            <a href="">安防监控</a>
+            <a href="">无线覆盖</a>
+            <a href="">综合布线</a>
+            <a href="">会议系统</a>
+            <a href="">机房建设</a>
+            <a href="">楼宇智控</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">新闻资讯</a>
+        </li>
+        <li><a href="#">网站首页</a>
+        </li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="box-img">
+        <img src="./images/banner.png" width="100%" height="800px" />
+      </div>
+      <div class="box-img">
+        <img src="./images/3345.png" width="100%" height="800px" />
+      </div>
+      <div class="box-img">
+        <img src="./images/13.jpg" width="100%" height="800px" />
+      </div>
+      <div class="box-img">
+        <img src="./images/timg.jfif" width="100%" height="800px" />
+      </div>
+      <div class="box-img">
+        <img src="./images/timg1.jfif" width="100%" height="800px" />
+      </div>
+      <div class="box-left">&lt;</div>
+      <div class="box-right">&gt;</div>
+    </div>
+    <div class="zhengwen">
+      <h>关于我们</h>
+      <p>About us</p>
+    </div>
+    <div class="aboutus">
+      <div class="greatsea">
+        <h>武汉鸿海鑫科技有限公司</h>
+        <div></div>
+        <p>
+          武汉鸿海鑫科技有限公司成立于2010年08月06日，注册地位于武汉市硚口区园博园南路9号汉江湾三号楼C-1-1、C-1-2、C-1-3室，法定代表人为李艳红。经营范围包括消防工程设计及施工；物联网、智能照明、楼宇自控项目的研发、设计及施工；
+          计算机软硬件、电子产品技术开发、安装及批发兼零售；
+          计算机系统集成；智能化管理系统工程设计、施工、调试、维护及维修。
+        </p>
+        <button class="btn_1">MORE</button>
+      </div>
+      <div class="aboutus_1">
+        <img src="./images/组 6.png" alt="">
+      </div>
+    </div>
+    <div class="websize">
+      <div>
+        <h1>2000<sup>+</sup></h1>
+        <p>公司成立</p>
+      </div>
+      <div>
+        <h1>675<sup>+</sup></h1>
+        <p>客户数量</p>
+      </div>
+      <div>
+        <h1>73<sup>+</sup></h1>
+        <p>项目覆盖范围</p>
+      </div>
+      <div>
+        <h1>64<sup>+</sup></h1>
+        <p>覆盖全国多个省市</p>
+      </div>
+    </div>
+    <div class=" xinwen">
+      <div class="anli-head">
+        <h>新闻资讯</h>
+        <p>News center </p>
+      </div>
+    </div>
+    <div class="info">
+      <div class="info-all">
+        <ul>
+          <li>武汉客厅方舱医院逐步恢复原有业态
+            <span>08-04</span>
+          </li>
+          <p>
+            当日，武汉客厅方舱医院完成使命，正在进行拆除作业并逐步恢复原有业态。
+            据了解，武汉客厅方舱医院由卓尔旗下物业武汉客厅....
+          </p>
+        </ul>
+        <ul>
+          <li>武汉客厅方舱医院逐步恢复原有业态<span>08-04</span>
+          </li>
+          <p>
+            当日，武汉客厅方舱医院完成使命，正在进行拆除作业并逐步恢复原有业态。
+            据了解，武汉客厅方舱医院由卓尔旗下物业武汉客厅....</p>
+        </ul>
+        <ul>
+          <li>武汉客厅方舱医院逐步恢复原有业态<span>08-04</span>
+          </li>
+          <p>
+            当日，武汉客厅方舱医院完成使命，正在进行拆除作业并逐步恢复原有业态。
+            据了解，武汉客厅方舱医院由卓尔旗下物业武汉客厅....</p>
+        </ul>
+      </div>
+      <div class="protechJourn">
+        <div class="protechJourn_1">
+          <div><span>08-04</span>
+          </div>
+          <h3> 武汉客厅方舱医院逐步回复原有业态</h3>
+          <p align="left">
+            当日，武汉客厅方舱医院完成使命，正在进行拆除作业并逐步恢复原有业态。
+            据了解，武汉客厅方舱医院由卓尔旗下物业武汉客厅....
+          </p>
+          <img src="./images/组 7.png " alt="">
+        </div>
+        <div>
+          <button class=" btn_2">MORE</button>
+        </div>
+      </div>
+    </div>
+    <div class="scope-yewu">
+      <div class="scope-head">
+        <h>业务范围</h>
+        <p>Scope of business </p>
+      </div>
+      <div class="wapper_box">
+        <div class="first_box">
+          <ul>
+            <li>
+              <img src="./images/组 8.png" alt="">
+              <h3>建筑智能化系统</h3>
+              <p>这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+            </li>
+          </ul>
+        </div>
+        <div class="second_box">
+          <ul>
+            <li><img src="./images/组 9.png" alt="">
+              <h3>建筑智能化系统</h3>
+              <p>这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+            </li>
+          </ul>
+        </div>
+        <div class="third_box">
+          <ul>
+            <li><img src="./images/组 10.png" alt="">
+              <h3>建筑智能化系统</h3>
+              <p>这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <button class="btn_4">MORE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" anli">
+    <div class="anli-head">
+      <h>案例展示</h>
+      <p>Case presentation </p>
+    </div>
+    <div class="anli_body">
+      <ul class="anli_body_ul">
+        <li>
+          <a href="">
+            <img src="./images/组 11.png" title="安防工程" alt="安防工程">
+          </a>
+          <h3>
+            安防工程
+          </h3>
+          <p>这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+        </li>
+        <li>
+          <a href=""> <img src="./images/组 12.png" title="安防工程" alt="安防工程">
+          </a>
+          <h3>
+            建筑智能化
+          </h3>
+          <p>这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+        </li>
+        <li>
+          <a href=""> <img src="./images/组 13.png" title="安防工程" alt="安防工程">
+          </a>
+          <h3>
+            综合布线
+          </h3>
+          <p>这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+        </li>
+        <li>
+          <a href=""> <img src="./images/组 14.png" title="安防工程" alt="安防工程">
+          </a>
+          <h3>
+            楼宇智控
+          </h3>
+          <p>这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+        </li>
+        <li>
+          <a href=""> <img src="./images/组 15.png" title="安防工程" alt="安防工程">
+          </a>
+          <h3>
+            安防工程
+          </h3>
+          <p>这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+        </li>
+        <li>
+          <a href=""> <img src="./images/组 16.png" title="安防工程" alt="安防工程">
+          </a>
+          <h3>
+            机房建设
+          </h3>
+          <p>这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+        </li>
+        <li>
+          <a href=""> <img src="./images/组 17.png" title="安防工程" alt="安防工程">
+          </a>
+          <h3>
+            会议系统
+          </h3>
+          <p>这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+        </li>
+        <li>
+          <a href=""> <img src="./images/组 18.png" title="安防工程" alt="安防工程">
+          </a>
+          <h3>
+            无线覆盖
+          </h3>
+          <p>这里是文字介绍，弱电工程指以搭建组织机构内的信息化管理支持...</p>
+        </li>
+      </ul>
+      <div>
+        <button class="btn_3">MORE</button>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="bottom_side">
+      <h1>联系我们</h1>
+      <p>Contact us</p>
+    </div>
+    <div class="bottom_side_1">
+      <h1>武汉鸿海鑫科技有限公司</h1><br />
+      <p style="float: left;line-height: 80px;">地址：园博园南路9号汉江湾3C-1层</p>
+      <p>邮编：43000</p><br />
+      <p>电话：027-85850275 </p>
+      <br />
+      <p>邮箱：hhx@greatsea.net.cn</p>
+    </div>
+  </div>
+  <div style="background-color: #363636; height: 50px;position: relative;color: #F8F8FF;">
+    <p style="float: left;margin-left: 500px; margin-top: 15px;">技术支持：武汉鸿海鑫科技有限公司</p>
+    <p style="float: left; margin-top: 15px;margin-left: 25px;">Copyright@All Rights Reserved</p>
+  </div>
+  </div>
+</body>

@@ -1,0 +1,58 @@
+.anli-head h {
+    font-size: 40px;
+    font-family: verdana;
+    font-weight: initial;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.anli-head p {
+    color: rgb(232, 232, 229);
+    font-size: 28px;
+}
+
+.anli_body {
+    margin-top: 80px;
+    list-style: none;
+}
+
+.anli_body_ul {
+    height: 900px;
+    width: 1400px;
+    left: 165px;
+    position: relative;
+
+}
+
+.anli_body_ul li {
+    height: 450px;
+    margin-top: 10px;
+    width: 290px;
+    margin-right: 13px;
+}
+
+
+.anli_body_ul li:hover img {
+    transition: all 1s;
+    transform: scale(1.05, 1.05);
+
+}
+
+.anli_body_ul li a {
+    padding: 0;
+    margin: 0;
+}
+
+.anli_body_ul li h3 {
+    text-align: left;
+    padding: 10px 10px;
+}
+
+.anli_body_ul li p {
+    padding: 5px;
+    text-align: left;
+    line-height: 25px;
+    color: #9c9c9c;
+}

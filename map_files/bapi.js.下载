@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <title>百度开发者中心-汇聚、开放、助力、共赢</title>
+    <meta name="keywords"
+          content="百度开发者中心、论坛、社区">
+    <meta name="description" content="百度开发者中心是一个面向开发者的知识分享平台，专注于为开发者打造一个有温度的技术交流社区，开发者通过平台来分享知识、相互交流。">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="format-detection" content="telphone=no, email=no">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="shortcut icon" href="https://developer-resource.bj.bcebos.com/images/developerLogo.ico" />
+    <link rel="bookmark" href="https://developer-resource.bj.bcebos.com/images/developerLogo.ico" type="image/x-icon" />
+    <!-- 适应移动端end -->
+    <link rel="stylesheet" href="https://developer.baidu.com/dist/1542700002/css/dep.css">
+</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://developer.baidu.com/dist/1542700002/css/home.css">
+    <!-- 在线文档 https://www.swiper.com.cn/cdn/index.html-->
+    <link rel="stylesheet" href="https://developer-forum-online.cdn.bcebos.com/swiper%2Fswiper-bundle.min.css">
+</head>
+<body>
+<!-- 公用头部 -->
+<header class="header clearfix" id="df-header">
+    <div class="f-cloud" id="f-cloud">
+        <div class="fl f-cloud-logo">
+            <a href="https://cloud.baidu.com" target="_blank">
+                <img src="https://developer.baidu.com/dist/1542700002/images/baiduyun-logo.png" alt="">
+            </a>
+        </div>
+    </div>
+    <nav class="navbar f-content-sticky clearfix" id="f-content-sticky">
+        <div class="container f-banner-navbar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://developer.baidu.com/">
+                    <img src="https://developer.baidu.com/dist/1542700002/images/Logo_developer.png" alt="">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">首页</a></li>
+                    <li><a href="/forum">讨论</a></li>
+                    <li><a href="/activity/list">活动</a></li>
+                    <li><a target="_blank"  href="http://abcxueyuan.cloud.baidu.com/#/line_course?nodeId=&index=&pageNo=1&sortTag=2&hmsr=%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%AD%E5%BF%83%E2%80%94%E2%80%94%E8%B7%B3%E8%BD%AC%E4%BA%91%E6%99%BA%E5%AD%A6%E9%99%A2%E6%8C%89%E9%92%AE&hmpl=&hmcu=&hmkw=&hmci=">课程</a></li>
+                    <li><a target="_blank" href="https://dianshi.baidu.com/competition">竞赛</a></li>
+                </ul>
+                <div class="navbar-form navbar-left hidden-md hidden-sm df-nav-search" id="df-nav-search">
+                    <div class="form-mask"></div>
+                    <div class="form-group">
+                        <input id="df-nav-search-cont" class="form-control" placeholder="搜索" autocomplete="off">
+                        <img id="df-nav-search-icon" src="https://developer.baidu.com/dist/1542700002/images/ic_search.png" class="navbar-search"></img>
+                        <div class="form-host-word" id="form-host-word">
+                            <ul>
+                                <li class="form-host-word-title">开发者热搜</li>
+                                <li><a href="/search?keyword=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD">人工智能</a></li>
+                                <li><a href="/search?keyword=%E4%BA%91%E5%8E%9F%E7%94%9F">云原生</a></li>
+                                <li><a href="/search?keyword=AI%E5%BA%94%E7%94%A8">AI应用</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-user">
+                    <ul class="nav nav-right">
+                        
+                        <!--用户头像部分 -->
+                        
+                        <li>
+                            <a href="https://passport.baidu.com/v2/?login&amp;tpl=newdev&amp;u=http%3A%2F%2Fdeveloper.baidu.com%2F" class="nav-registration"  id="f-editor-login">登录</a>
+                            <i class="border-line"></i>
+                            <a href="https://passport.baidu.com/v2/?login&amp;tpl=newdev&amp;u=http%3A%2F%2Fdeveloper.baidu.com%2F" class="nav-post"  id="f-editor-post">注册</a>
+
+                        </li>
+                        <input type="hidden" value="false" id="isLogin">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- banner区域开始 -->
+<div class="home-big-banner">
+    <div class="home-banner container">
+    <div class="fl home-banner-left">
+        <!-- 轮播图开始 -->
+        <div class="banner-big fl col-xs-12">
+            <div class="swiper-container">
+                <div class="swiper-wrapper" >
+                    <div class="swiper-slide" >
+                        <a class="swiper-img" target="_blank"
+                           href="https://cloud.baidu.com/campaign/autumn-promotion/index.html?track=cp:baidukaifazhepingtai|pf:pc|pp:nei-baidukaifazhepingtai-huodong-20bayuedacu-banner|pu:baidukaifazhepingtai|ci:|kw:10016544"  >
+                            <img src="https://online-certificate-img.bj.bcebos.com/1597397826304百度开发者中心 880310@2x.png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide" >
+                        <a class="swiper-img" target="_blank"
+                           href="https://developer.baidu.com/topic/show/290501"  >
+                            <img src="https://online-certificate-img.bj.bcebos.com/1586048944628880x310-3.png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide" >
+                        <a class="swiper-img" target="_blank"
+                           href="https://developer.baidu.com/topic/show/290510"  >
+                            <img src="https://online-certificate-img.bj.bcebos.com/1586049292585880x310-2.png" alt=""></a>
+                    </div>
+                </div>
+
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev" style="display:none;">
+                    <img src="https://developer.baidu.com/dist/1542700002/images/btn_left.png" alt="">
+                </div>
+                <div class="swiper-button-next" style="display:none;">
+                    <img src="https://developer.baidu.com/dist/1542700002/images/btn_right.png" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- 轮播图 over -->
+    </div>
+    <div class="fr home-banner-right hidden-xs hidden-sm hidden-md">
+        <div class="banner-right-img">
+            <div class="banner-small-one">
+                <a  href="https://cloud.baidu.com/campaign/autumn-promotion/index.html?track=cp:baidukaifazhepingtai|pf:pc|pp:nei-baidukaifazhepingtai-huodong-20bayuedacu-cemianxiaotu|pu:baidukaifazhepingtai|ci:|kw:10016545" target="_blank"><img
+                        src="https://online-certificate-img.bj.bcebos.com/1597397908782百度开发者中心 283147@2x.png" alt="" ></a>
+            </div>
+            <div class="banner-small-one">
+                <a  href="https://dwz.cn/HgUj9jkv" target="_blank"><img
+                        src="https://online-certificate-img.bj.bcebos.com/1591328864134云计算283x147@2x.png" alt="" ></a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--页面主体开始 -->
+<div class="home-w container" id="home-w">
+    <div class="row">
+        <!-- 内容区域开始 -->
+        <div class="home-main clearfix">
+            <div class="home-main-core col-xs-12 col-md-12 col-md-9 fl">
+                <div class="home-main-center">
+    <!--  tab栏 -->
+    <div class="home-main-center-tab-box">
+
+        <ul class="home-main-center-tab-title clearfix" id="home-main-center-tab-title">
+            <li class="tab-item tab-title-active">
+                <a href="/?type=&amp;status=">推荐</a>
+            </li>
+            <li class="tab-item hidden-xs hidden-sm" >
+                <a  href="/?type=46&amp;status=0">
+                    <span>人工智能</span>
+                </a>
+            </li>
+            <li class="tab-item hidden-xs hidden-sm" >
+                <a  href="/?type=20&amp;status=0">
+                    <span>云计算</span>
+                </a>
+            </li>
+            <li class="tab-item hidden-xs hidden-sm" >
+                <a  href="/?type=218&amp;status=0">
+                    <span>百度App技术</span>
+                </a>
+            </li>
+            <li class="tab-item hidden-xs hidden-sm" >
+                <a  href="/?type=37&amp;status=0">
+                    <span>百度安全</span>
+                </a>
+            </li>
+            <li class="tab-item hidden-xs hidden-sm" >
+                <a  href="/?type=2&amp;status=0">
+                    <span>Apollo</span>
+                </a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="tab-item home-main-center-tab-more hidden-xs hidden-sm">
+                <div class="home-main-center-tab-more-text">
+                    <span>更多</span>
+                    <img src="https://developer.baidu.com/dist/1542700002/images/icon-dropdown.svg" alt="">
+                </div>
+                <div class="home-main-center-tab-more-triangle"></div>
+                <div class="home-main-center-tab-more-box">
+                    <ul class="home-main-center-tab-more-dropdown">
+                        
+                        
+                        
+                        
+                        
+                        <li class="tab-item tab-more-item hidden-xs hidden-sm" >
+                            <a  href="/?type=222&amp;status=0">
+                                <span>项目管理</span>
+                            </a>
+                        </li>
+                        <li class="tab-item tab-more-item hidden-xs hidden-sm" >
+                            <a  href="/?type=28&amp;status=0">
+                                <span>物联网</span>
+                            </a>
+                        </li>
+                        <li class="tab-item tab-more-item hidden-xs hidden-sm" >
+                            <a  href="/?type=51&amp;status=0">
+                                <span>开发者</span>
+                            </a>
+                        </li>
+                        <li class="tab-item tab-more-item hidden-xs hidden-sm" >
+                            <a  href="/?type=33&amp;status=0">
+                                <span>智能运维</span>
+                            </a>
+                        </li>
+                        <li class="tab-item tab-more-item hidden-xs hidden-sm" >
+                            <a  href="/?type=48&amp;status=0">
+                                <span>区块链</span>
+                            </a>
+                        </li>
+                        <li class="tab-item tab-more-item hidden-xs hidden-sm" >
+                            <a  href="/?type=1&amp;status=0">
+                                <span>飞桨PaddlePaddle</span>
+                            </a>
+                        </li>
+                        <li class="tab-item tab-more-item hidden-xs hidden-sm" >
+                            <a  href="/?type=3&amp;status=0">
+                                <span>小度助手</span>
+                            </a>
+                        </li>
+                        <li class="tab-item tab-more-item hidden-xs hidden-sm" >
+                            <a  href="/?type=14&amp;status=0">
+                                <span>自然语言处理</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="host-time hidden-sm hidden-xs">
+                <a href="/?type=&amp;status=0" class="host-topic text-active">热度</a>
+                <i class="home-line"></i>
+                <a href="/?type=&amp;status=1" class="time-topic">时间</a>
+                <input type="hidden" id="tag-type" value="">
+                <input type="hidden" id="tag-status" value="0">
+            </li>
+        </ul>
+        <div class="home-main-center-tab-products">
+            <!-- 推荐位置的四篇文章-->
+            <a class="home-main-products clearfix" href="/topic/show/291650">
+                <div class="home-products-left fl">
+                    <div class="home-products-title">智能云亮相百度世界2020：重磅发布和升级十大产品，加速AI新基建</div>
+                    <p>9月15日，百度年度最重要的AI盛会“百度世界2020”在央视新闻线上直播。本次大会主题为“万物智能”，呈现百度AI最领先的技术成果和最全面的落地案例。</p>
+                    <div class="home-products-bottom">
+                        <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                        <ul class="home-products-tag-box clearfix">
+                            <li class="home-products-tag">
+                                <span>人工智能</span>
+                                <span class="home-dawn">、</span>
+                            </li>
+                            <li class="home-products-tag">
+                                <span>无人车</span>
+                                <span class="home-dawn">、</span>
+                            </li>
+                        </ul>
+                        <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                        <span>5.5k人浏览</span>
+<!--                        <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                        <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                    </div>
+                </div>
+                <div class="home-products-right fr hidden-sm hidden-xs">
+                    <img src="https://developer-forum-online.cdn.bcebos.com/797d1937-729f-43b4-9b13-4cc610f9a6c3.png" alt="">
+                </div>
+            </a><a class="home-main-products clearfix" href="/topic/show/290923">
+                <div class="home-products-left fl">
+                    <div class="home-products-title">百度三个“5”布局新基建：增算力、养人才、促就业</div>
+                    <p>从算力到人才培养，从赋能企业到促进社会就业，百度用三个“5”持续加码布局新基建。近日，百度宣布，未来十年将继续加大在数据、算力、人才等 AI 新基建领域的投入。</p>
+                    <div class="home-products-bottom">
+                        <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                        <ul class="home-products-tag-box clearfix">
+                            <li class="home-products-tag">
+                                <span>人工智能</span>
+                                <span class="home-dawn">、</span>
+                            </li>
+                            <li class="home-products-tag">
+                                <span>数据</span>
+                                <span class="home-dawn">、</span>
+                            </li>
+                        </ul>
+                        <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                        <span>11.9k人浏览</span>
+<!--                        <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                        <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                    </div>
+                </div>
+                <div class="home-products-right fr hidden-sm hidden-xs">
+                    <img src="https://developer-forum-online.cdn.bcebos.com/5b14b1fd-cb3b-487d-ac1a-48fa7177193d.png" alt="">
+                </div>
+            </a><a class="home-main-products clearfix" href="/topic/show/290824">
+                <div class="home-products-left fl">
+                    <div class="home-products-title">深源恒际医疗票据OCR落地九省市 服务范围覆盖过半市场</div>
+                    <p>深源恒际基于OCR识别技术，开发了集识别、提取、结构化功能于一体的信息识别录入自动化解决方案。在健康险核赔理算中，自动从各类医疗票据图像中识别、提取出理算所需的字段信息，并同步完成结构化录入</p>
+                    <div class="home-products-bottom">
+                        <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                        <ul class="home-products-tag-box clearfix">
+                            <li class="home-products-tag">
+                                <span>AI </span>
+                                <span class="home-dawn">、</span>
+                            </li>
+                            <li class="home-products-tag">
+                                <span>人工智能</span>
+                                <span class="home-dawn">、</span>
+                            </li>
+                            <li class="home-products-tag">
+                                <span>文字识别</span>
+                                <span class="home-dawn">、</span>
+                            </li>
+                        </ul>
+                        <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                        <span>3.8k人浏览</span>
+<!--                        <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                        <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                    </div>
+                </div>
+                <div class="home-products-right fr hidden-sm hidden-xs">
+                    <img src="https://developer-forum-online.cdn.bcebos.com/1da530c0-a628-43e2-ac6d-c0b82c50062d.png" alt="">
+                </div>
+            </a>
+            <!--其他标签的-->
+            
+        </div>
+    </div>
+    <!-- 视频推荐位开始 -->
+    <div class="home-main-center-video-recommend clearfix">
+        <a class="home-main-center-video" target="_blank" href="https://dwz.cn/P2IJ5seR">
+            <div class="home-main-center-video-small">机器学习</div>
+            <img src="https://online-certificate-img.bj.bcebos.com/1586049056616Rectangle 5 Copy 5 + Rectangle 5 Copy 3 Mask-0.png" alt="">
+            <div class="home-main-center-video-text">
+                <div class="home-main-center-video-title">机器学习实践：房价预测</div>
+                <div class="home-main-center-video-word">机器学习的入门级实验，带你预测波士顿房价</div>
+            </div>
+        </a><a class="home-main-center-video" target="_blank" href="https://dwz.cn/o3L9qWPe">
+            <div class="home-main-center-video-small">自然语言处理</div>
+            <img src="https://online-certificate-img.bj.bcebos.com/1586049064114Rectangle 5 Copy 5 + Rectangle 5 Copy 3 Mask.png" alt="">
+            <div class="home-main-center-video-text">
+                <div class="home-main-center-video-title">AI自然语言处理实践</div>
+                <div class="home-main-center-video-word">自然语言处理的入门级实验，助你掌握词向量模型</div>
+            </div>
+        </a><a class="home-main-center-video" target="_blank" href="https://dwz.cn/pRxo9VUs">
+            <div class="home-main-center-video-small">计算机视觉</div>
+            <img src="https://online-certificate-img.bj.bcebos.com/1586049072828Rectangle 5 Copy 5 + Rectangle 5 Copy 3 Mask-0.png" alt="">
+            <div class="home-main-center-video-text">
+                <div class="home-main-center-video-title">AI自计算机实践</div>
+                <div class="home-main-center-video-word">计算机视觉的入门级实验，带你完成手写数字识别</div>
+            </div>
+        </a>
+    </div>
+    <!--信息流开始-->
+    <div class="home-main-center-tab-products" id="home-main-center-information-flow">
+        <!--推荐时-->
+        <a class="home-main-products clearfix" href="/topic/show/290911">
+            <div class="home-products-left fl">
+                <div class="home-products-title">洞察风险再去“爬山”，联手帮金融行业翻过层层阻碍！</div>
+                <p>百度内部积累知识图谱规模已经达到亿级实体和千亿级属性关系，是中文领域最大的知识图谱，同时，百度知识图谱沉淀并积累了包括从知识获取到整合、补全、扩展、知识图谱认知、知识图谱应用在内的全栈技术，</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>AI </span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                        <li class="home-products-tag">
+                            <span>云计算</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>897人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/9fbf9717-172d-48dc-9901-49d1315b7360.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290912">
+            <div class="home-products-left fl">
+                <div class="home-products-title">seo优化之如何提高百度蜘蛛对网站的抓取频率?</div>
+                <p>抓取频次是搜索引擎在单位时间内(天级)对网站服务器抓取的总次数，如果搜索引擎对站点的抓取频次过高，很有可能造成服务器不稳定，Baiduspider会根据网站内容更新频率和服务器压力等因素自动</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>开源分享</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                        <li class="home-products-tag">
+                            <span>个性化推荐</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>930人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/6926dcfc-3803-4fff-863a-a39309902a2a.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290914">
+            <div class="home-products-left fl">
+                <div class="home-products-title">深源恒际：担心个人身份被冒用？不存在！</div>
+                <p>为金融机构提供远程e-KYC技术解决方案，通过人证比对、活体检测、防Hack、多要素交叉验真以及OCR识别五个服务模块，帮助金融机构在线完成用户身份的实名认证与验真，以及用户信息的实时提取与</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>OCR</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                        <li class="home-products-tag">
+                            <span>AI </span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                        <li class="home-products-tag">
+                            <span>云计算</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>938人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/c8530ce9-5915-4301-9551-6ef97003f4b7.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290915">
+            <div class="home-products-left fl">
+                <div class="home-products-title">限时免费在线学习考取百度智能云ABC（初级）在线认证证书</div>
+                <p>本认证为人工智能 ABC 能力普及认证，带您全面了解 ABC 产业结构和关键技术，并考取百度云智学院权威认证证书，成为掌握加速产业智能化核心人才。</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>AI </span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                        <li class="home-products-tag">
+                            <span>开发者</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>924人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/c5df6222-6c3e-4716-a38a-aa034047cb52.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290919">
+            <div class="home-products-left fl">
+                <div class="home-products-title">业内首款，百度工业视觉智能平台全新亮相</div>
+                <p>在Vision China展会同期召开的机器视觉技术及工业应用研讨会上，百度智能云智能制造部负责人黄锋表示：“百度智能制造方案以工业AI视觉为突破口，通过3年多持续耕耘，解决了AI视觉落地工</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>计算机视觉</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                        <li class="home-products-tag">
+                            <span>人工智能</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>833人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/d2f63a94-53a3-42c3-83fb-6f36cb31907a.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290924">
+            <div class="home-products-left fl">
+                <div class="home-products-title">始于视频，走向新基建</div>
+                <p>作为智慧城市的重要组成部分，平安城市、天网工程、雪亮工程在保障人民生命财产安全、社会稳定等方面起着非常重要的作用。正因为此，十数年间，它们的建设从未中断，直到今天，依旧在积极推进。</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>个性化推荐</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>802人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/9f431210-3d0f-4c05-8763-29645d0f23cd.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290939">
+            <div class="home-products-left fl">
+                <div class="home-products-title">又一个新基建标杆案例来了！百度与上海浦东新区签署战略合作协议</div>
+                <p>7月11日，2020世界人工智能大会云端峰会签约与发布活动上，上海市浦东新区人民政府与百度签署战略合作框架协议。双方将发挥各自优势，共同探索人工智能技术在实体经济中的创新应用，推进全国首个百</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>飞桨PaddlePaddle</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                        <li class="home-products-tag">
+                            <span>AI </span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>645人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/7b4f6a4f-f75b-43c0-be2e-358fbaeaa53f.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290942">
+            <div class="home-products-left fl">
+                <div class="home-products-title">OCR技术在手， 医疗理赔速度妥了！</div>
+                <p>现在，泰康保险业务智能化实践又有新动作，泰康保险与百度智能云合作，将百度OCR技术应用于理赔业务，并以key-value的方式输出结构化结果，解决百万级不同模版的医疗理赔票据结构化场景，释放</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>OCR</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>648人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/6926dcfc-3803-4fff-863a-a39309902a2a.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290948">
+            <div class="home-products-left fl">
+                <div class="home-products-title">中国建材集团与百度智能云达成重磅合作，联手打造智能制造新范本</div>
+                <p>7月13日，百度与中国建材集团签署战略合作协议，将在智慧物流、数字矿山、智慧工厂、工业无人驾驶、数据中心新基建、企业 AI 大脑等多个领域开展深入合作。</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>人工智能</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>624人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/d2f63a94-53a3-42c3-83fb-6f36cb31907a.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290951">
+            <div class="home-products-left fl">
+                <div class="home-products-title">技术教程|百度鹰眼历史轨迹查询：轨迹去噪功能应用</div>
+                <p>本期教程主要介绍百度鹰眼轨迹服务（下简称鹰眼）WebAPI中的历史轨迹查询API的使用技巧，感兴趣的开发者可及时关注。</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>开源技术</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                        <li class="home-products-tag">
+                            <span>开源分享</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>597人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/62db4911-55c8-4196-90c6-bc45de5a4904.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290959">
+            <div class="home-products-left fl">
+                <div class="home-products-title">轻松应对潮汐流量，游戏直播也可以很飒</div>
+                <p>在当下的互联网商业环境中，游戏直播热度持续高涨。作为一种高粘性的内容形态，优质畅快的观看体验是吸引并留住用户的重要方式。尤其是近几年，如何打造“极致”直播，已经成为各大游戏直播平台竞争的终极</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>开源分享</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>567人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/19db82a1-c88c-4a0a-bbf2-336e93b031a2.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290964">
+            <div class="home-products-left fl">
+                <div class="home-products-title">开源：从“复兴”走向“商业化”</div>
+                <p>这一系列事件早就不再是对开源本身的认可，而是标志着开源业务作为一种商业行为（business），其价值和模式逐渐复兴，终于获得了资本市场的广泛承认。</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>开源分享</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>533人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/5b14b1fd-cb3b-487d-ac1a-48fa7177193d.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290965">
+            <div class="home-products-left fl">
+                <div class="home-products-title">红帽借“订阅”成开源一哥，首创者 Cormier 升任总裁</div>
+                <p>关于开源，并没有固定的商业模式，与其思考“我需要通过项目赚钱”，不如思考“我需要构建一个能够带来价值的产品”。</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>开源分享</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>537人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/a91997e2-27b5-42eb-a1bc-ae567e2b028e.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290966">
+            <div class="home-products-left fl">
+                <div class="home-products-title">Git 15 周年：当年的分道扬镳，成就了今天的开源传奇</div>
+                <p>一个健康的开源项目，在“集市”模式下接受来自世界各地开发者提交的代码 ，版本更新频率通常更高。如何管理项目的版本更新，是项目开发、维护过程中必须考虑的问题。</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>开源分享</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>544人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/6c0d6728-8562-4932-80da-72b95e6657fe.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/290967">
+            <div class="home-products-left fl">
+                <div class="home-products-title">从 Copyright 到 Copyleft，聊聊版权与开源协议</div>
+                <p>“Copyleft”最初是为反对商业软件而生，但它并不是放弃版权，“Copyleft”中的“Left”，不使用英语中“保留”的意思，而是指“Left（左）”</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>开源分享</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>576人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/74bdf17c-efe6-4e61-8d60-92d49f1cd9c6.png" alt="">
+            </div>
+        </a><a class="home-main-products clearfix" href="/topic/show/291046">
+            <div class="home-products-left fl">
+                <div class="home-products-title">化身阿凡达，国外小哥开源 AI 实时变脸工具 Avatarify</div>
+                <p>疫情期间，很多人都在用 Zoom 和 Skype 等软件进行视频会议。国外一位开发小哥觉得这样开会太无聊，于是基于 first-order-model 开发了一个能够把别人的照片套在自己脸上</p>
+                <div class="home-products-bottom">
+                    <img class="home-tag-img" src="https://developer.baidu.com/dist/1542700002/images/icon_tag.svg" alt="">
+                    <ul class="home-products-tag-box clearfix">
+                        <li class="home-products-tag">
+                            <span>AI </span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                        <li class="home-products-tag">
+                            <span>人工智能</span>
+                            <span class="home-dawn">、</span>
+                        </li>
+                    </ul>
+                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>
+                    <span>275人浏览</span>
+<!--                    <span>&nbsp;&nbsp;·&nbsp;&nbsp;</span>-->
+<!--                    <span th:if="${topic.replyCount != null}" th:utext="${topic.replyCount >= 1000} ? ${#numbers.formatDecimal(topic.replyCount/1000.0,1,1)} + 'k' : ${topic.replyCount} + '评论'"></span>-->
+                </div>
+            </div>
+            <div class="home-products-right fr hidden-sm hidden-xs">
+                <img src="https://developer-forum-online.cdn.bcebos.com/3d63c40e-9f57-42e0-b753-59b57937d05d.png" alt="">
+            </div>
+        </a>
+        <!--非推荐时-->
+        
+    </div>
+    <div class="hide-topic home-get-more">点击加载更多</div>
+    <div class="show-topic not-get-more">
+        <div class="not-get-more-line"></div>
+        <div class="not-get-more-text">没有更多了</div>
+    </div>
+</div>
+
+            </div>
+            <!-- 右侧部分开始 -->
+            <div class="home-main-right hidden-sm hidden-xs col-md-3 fr">
+                <div class="home-add-topic-box">
+    <div class="home-add-topic">
+        <div class="home-add-topic-title">发布文章</div>
+        <div class="home-add-topic-text">发现更多内容创作者和学习者</div>
+        <a href="/topic/add" class="home-add-topic-btn">开始写作</a>
+    </div>
+    <div class="home-topic-cont clearfix">
+        <a class="home-topic-cont-text fl" href="">我的创作</a>
+        <span class="home-topic-cont-num fr">0</span>
+    </div>
+</div>
+                <div class="home-host-topic" >
+    <div class="home-big-title">
+        <div class="home-word-box">
+            <img src="https://developer.baidu.com/dist/1542700002/images/icon_host.png" alt="">
+            <span>本周热点</span>
+        </div>
+    </div>
+    <ul class="home-product-text" >
+        <li>
+            <div class="home-number">
+                <img  src="https://developer.baidu.com/dist/1542700002/images/number/No.1.png" alt="">
+                
+                
+                
+                
+            </div>
+            <a class="home-block ellipsis" href="/topic/show/292006" target="_blank">想看企业开发者与技术大咖的现场battle吗？不用门票的那种</a>
+        </li>
+        <li>
+            <div class="home-number">
+                
+                <img  src="https://developer.baidu.com/dist/1542700002/images/number/No.2.png" alt="">
+                
+                
+                
+            </div>
+            <a class="home-block ellipsis" href="/topic/show/292052" target="_blank">深源恒际：依托AI技术打造智能理赔TPA系统 十倍提升健康险理赔服务效率</a>
+        </li>
+    </ul>
+</div>
+                <div class="home-host-activity">
+    <div class="home-big-title">
+        <div class="home-word-box">
+            <img src="https://developer.baidu.com/dist/1542700002/images/icon_activity.png" alt="">
+            <span>精彩推荐</span>
+        </div>
+    </div>
+    <div class="home-host-activity-one-box">
+        <div class="home-host-activity-one">
+            <a href="https://dwz.cn/4EmS2mXS" target="_blank">
+                <img src="https://online-certificate-img.bj.bcebos.com/1586049083835人工智能283x147@2x.png" alt="">
+            </a>
+        </div>
+        <div class="home-host-activity-one">
+            <a href="https://dwz.cn/tkaROOYA" target="_blank">
+                <img src="https://online-certificate-img.bj.bcebos.com/1586049095714Banner-Right-2(校园启航).png" alt="">
+            </a>
+        </div>
+    </div>
+
+</div>
+                <div class="home-activity clearfix">
+    <div class="home-big-title clearfix">
+        <div class="home-word-box fl">
+            <img src="https://developer.baidu.com/dist/1542700002/images/icon_date.png" alt="">
+            <span>活动排期</span>
+        </div>
+        <a class="fr home-activity-more" href="/activity/list">更多</a>
+    </div>
+    <a class="home-activity-text" href="/activity/show/53">
+        <p class="home-activity-title">
+            <i class="home-schedule-circle"></i>
+            <span class="home-gray">2019-12-21 周六 · 北京 · </span>
+            <span class="home-dull">报名截止</span></p>
+        <span class="f-activity-title">第89期百度技术沙龙：VR技术与应用发展新趋势</span>
+    </a><a class="home-activity-text" href="/activity/show/51">
+        <p class="home-activity-title">
+            <i class="home-schedule-circle"></i>
+            <span class="home-gray">2019-12-07 周六 · 北京 · </span>
+            <span class="home-dull">报名截止</span></p>
+        <span class="f-activity-title">第88期百度技术沙龙：百度七层负载均衡BFE开源技术分享会</span>
+    </a><a class="home-activity-text" href="/activity/show/50">
+        <p class="home-activity-title">
+            <i class="home-schedule-circle"></i>
+            <span class="home-gray">2019-09-26 周四 · 百度（武汉）创新中心•湖北省武汉 · </span>
+            <span class="home-dull">报名截止</span></p>
+        <span class="f-activity-title">第87期百度技术沙龙：云原生应用技术专场</span>
+    </a><a class="home-activity-text" href="/activity/show/48">
+        <p class="home-activity-title">
+            <i class="home-schedule-circle"></i>
+            <span class="home-gray">2019-08-03 周六 · 上海 · </span>
+            <span class="home-dull">报名截止</span></p>
+        <span class="f-activity-title">第86期百度技术沙龙：探索Apache孵化项目——brpc的原理与应用</span>
+    </a><a class="home-activity-text" href="/activity/show/47">
+        <p class="home-activity-title">
+            <i class="home-schedule-circle"></i>
+            <span class="home-gray">2019-06-21 周五 · 杭州 · </span>
+            <span class="home-dull">报名截止</span></p>
+        <span class="f-activity-title">云智高校行 | 这是你离AI时代最近的一次</span>
+    </a>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--回到顶部-->
+<div class="back-top content-back-top" title="回到顶部">
+    <img src="https://developer.baidu.com/dist/1542700002/images/ic_zhankai.png" alt="">
+</div>
+<!-- 公用底部 -->
+<footer class="footer">
+    <!-- pc端公用底部 -->
+    <div class="container footer-copyright hidden-xs">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-2 footer-logo">
+                <a href="https://developer.baidu.com">
+                    <img src="https://developer.baidu.com/dist/1542700002/images/Logo_developer_s.png" width="180px">
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-4 footer-hr copyright-row">
+                <ul class="nav-pills">
+                    <li><a href="https://developer.baidu.com/forum/topic/list?boardId=91" target="_blank">问题反馈</a><i
+                            class="footer-inline">|</i></li>
+                    <li><a href="mailto:developer-support@baidu.com">邮箱</a></li>
+                </ul>
+                <p>
+                    &copy; 2020 Baidu
+                    <a href="http://www.baidu.com/duty/" target="_blank" title="使用百度前必读">使用百度前必读</a>
+                    <i class="footer-inline">&nbsp;|&nbsp;</i>
+                    京ICP证030173号
+                </p>
+            </div>
+            <div class="col-md-6 col-lg-5 fr f-wechat">
+                <div class="col-xs-12 col-sm-4 col-md-4 trust-row hidden-xs">
+                    <div class="trust fl">
+                        <p>全国首批获得可信云服务认证</p>
+
+                        <p>对象存储服务:N002002 云数据库服务:N003002</p>
+                    </div>
+                    <div class="f-copyright fr"><img src="https://developer.baidu.com/dist/1542700002/images/Authentication.png" alt=""></div>
+                </div>
+                <div class="col-xs-12 col-md-2 weixin-row footer-hr">
+                    <div class="weixin-img">
+                        <img src="https://developer.baidu.com/dist/1542700002/images/QR_code.png" alt="">
+                        <p>关注微信公众号</p>
+                    </div>
+                </div>
+            </div>
+            <div class="f-friendship">
+                <div class="forum-f-link clearfix">
+                    <div class="f-friendship-link fl">开发资源:</div>
+                    <ul class="f-friendship-ai fl">
+                        <li><a href="http://developer.baidu.com/console#app/project" target="_blank">应用管理</a></li>
+                        <li><a href="https://developer.baidu.com/platform/catalog/navigation-c/node/n301" target="_blank">开放技术</a></li>
+                        <li><a href="https://developer.baidu.com/platform/catalog/navigation-c/node/n302" target="_blank">推广变现</a></li>
+                        <li><a href="http://abcxueyuan.cloud.baidu.com/#/line_course?nodeId=&index=&pageNo=1&sortTag=2&hmsr=%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%AD%E5%BF%83%E2%80%94%E2%80%94%E8%B7%B3%E8%BD%AC%E4%BA%91%E6%99%BA%E5%AD%A6%E9%99%A2%E6%8C%89%E9%92%AE&hmpl=&hmcu=&hmkw=&hmci=" target="_blank">百度云智学院</a></li>
+                        <li><a href="http://abcxueyuan.cloud.baidu.com/newlab/#/home" target="_blank">开发者实验</a></li>
+                    </ul>
+                </div>
+                <div class="forum-f-link clearfix">
+                    <div class="f-friendship-link fl">友情链接:</div>
+                    <ul class="f-friendship-ai fl">
+                        <li><a href="https://cloud.baidu.com" target="_blank">百度智能云</a></li>
+                        <li><a href="https://aim.baidu.com" target="_blank">AI市场</a></li>
+                        <li><a href="https://anquan.baidu.com" target="_blank">百度安全</a></li>
+                        <li><a href="https://lbsyun.baidu.com" target="_blank">百度地图开放平台</a></li>
+                        <li><a href="https://ziyuan.baidu.com" target="_blank">搜索资源平台</a></li>
+                        <li><a href="http://mtc.baidu.com" target="_blank">百度众测</a></li>
+                        <li><a href="http://openweb.baidu.com" target="_blank">Web技术</a></li>
+                        <li><a href="http://bit.baidu.com/index" target="_blank">百度技术学院</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 移动端公用底部 -->
+    <div class="container f-m-footer col-xs-12 hidden-lg hidden-md hidden-sm">
+        <div class="row">
+            <div class="f-m-share-weixin">
+                <img src="https://developer.baidu.com/dist/1542700002/images/QR_code.png" alt="">
+                <p>关注微信公众号</p>
+            </div>
+            <div class="f-m-copyright-logo mr20">
+                <img src="https://developer.baidu.com/dist/1542700002/images/Logo_developer_s.png" alt="">
+            </div>
+            <div class="f-m-email mr20">
+                <a href="#">问题反馈</a>
+                <i class="f-line"></i>
+                <a href="#" class="f-footer-a">邮箱</a>
+                <p class="f-m-copyright-bottom mr20">© 2020 Baidu ; 由 百度智能云 提供计算服务</p>
+                <p class="f-m-copyright-bottom"><a src="https://www.baidu.com/duty">使用百度前必读</a>
+                    | 京ICP证030173号</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://developer-forum-online.cdn.bcebos.com/swiper%2Fswiper-bundle.min.js"></script>
+<div class="common-scripts">
+    <script src="https://developer.baidu.com/dist/1542700002/dep.js"></script>
+    <!-- 百度统计 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement('script');
+            hm.src = 'https://hm.baidu.com/hm.js?3abe3fb0969d25e335f1fe7559defcc6';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</div>
+<script src="https://developer.baidu.com/dist/1542700002/home.js"></script>
+
+</body>
+</html>

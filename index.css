@@ -1,0 +1,277 @@
+.logo_img {
+
+    margin-top: 15px;
+    height: 40px;
+    width: 250px;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 20px;
+   
+
+}
+
+.navbar {
+    margin-left: 30px;
+}
+.navList{
+    margin: 0;
+    padding: 0;
+}
+.navList > li{
+    height: 55px;
+    line-height: 55px;
+    transition-duration: 2s;
+   
+}
+/* 导航以及下拉选 */
+.dropdown{
+    display:block ;
+}
+.dropdown-content{
+    list-style: none;
+    text-align: center;
+    padding:0px 15px 0px 15px; 
+    background-color:white;  
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;  
+   
+}
+.dropdown-content li a{
+    text-decoration: none;
+    color: rgb(36, 35, 35);
+    border-bottom: 1px solid #d6d5d5;
+    padding:5px;
+    letter-spacing: 1px;
+
+}
+.dropdown-content >li  :hover{
+    color: rgb(147, 147, 235);
+    border-bottom: 1px solid  rgb(147, 147, 235);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 999;
+}
+
+
+/* 数据实时线 */
+.data{
+    height: 200px;
+    top: -100px;
+    background-color:white; 
+    position:relative;
+    
+}
+.data .rounded{
+    height: 200px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    box-shadow: 5px 5px 5px 5px #f0efef;
+}
+.data .rounded div{
+    text-align: center;
+    border-right:1px solid rgb(245, 240, 240);
+}
+
+.data .rounded div p{
+    color: rgb(212, 211, 211);
+}
+.data .rounded div  h1:hover{
+   transition: 1s; 
+   cursor: pointer;
+    transform: scale(1.3);
+}
+
+/* 新闻资讯 */
+
+.news div{
+    height: 200px;
+    border-top: 1px solid rgb(232, 232, 229);
+    border-bottom: 1px solid rgb(232, 232, 229);
+}
+
+.news div ul{
+    list-style:square url(./images/03.png);
+    padding:40px ;
+}
+.news div ul li{
+    font-size: 17px;
+    font-weight: 900;
+    margin:5px;
+    padding-bottom: 10px;
+}
+.news div ul li a{
+    color: black;
+    text-decoration: none;
+}
+.news div ul li  :hover{
+    color:blue ;
+}
+.news div ul li span{
+    float: right;
+}
+.news div ul p{
+    text-align: justify;
+    color: rgb(170, 169, 169);
+}
+
+/* 业务范围 */
+.business{
+    background-image:url(./images/50.png) ; 
+    padding: 80px; 
+    margin-top: 80px;
+}
+.business div h1{
+    font-size: 40px;
+    font-family: Verdana;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+
+.businessAd .card{
+    background-color: white ;
+    padding: 10px;
+    margin:10px
+}
+.businessAd .card img{
+    height: 200px;
+}
+.businessAd .card div a{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+     margin-bottom: 30px;
+}
+.businessAd .card .card-body .card-title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    padding:8px;
+   
+}
+.businessAd .card .card-body .card-text{
+    text-align: justify;
+    color: rgb(170, 169, 169);
+}
+
+/* 案例展示 */
+.showEx .showTitle{
+     margin-top: 80px;
+     padding-bottom: 30px;
+     padding-left: 0;
+} 
+
+.showEx .showTitle h1{
+    font-size: 40px;
+    font-family: Verdana;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.showEx .showTitle p{
+    font-size: 28px; 
+    color: rgb(232, 232, 229)
+}
+
+
+.showEx .showCard  div{
+  padding-bottom: 10px;
+ 
+
+}
+
+.showEx .showCard .col img:hover{
+    transition:1s;
+    transform: scale(1.1);
+    cursor: pointer;
+   
+}
+.showEx .showCard div img{
+    height: 260px;
+}
+.showEx .showCard div .card-body h3{
+    font-size: 20px;
+    font-weight: 900;
+    padding:10px;
+
+}
+.showEx .showCard div .card-body h3 a{
+    color: black;
+    text-decoration: none;
+    
+}
+.showEx .showCard div .card-body h3 a:hover{
+    color: rgb(15, 15, 185);
+}
+.showEx .showCard div .card-body{
+    padding: 0;
+    margin: 20px 0px 20px 0px;
+}
+.showEx .showCard div .card-body p{
+    text-align: justify;
+    color:rgb(187, 187, 186) ;
+}
+.showEx .btn a:hover{
+    color: white;
+}
+
+
+/* 页面底部样式 */
+
+.upSide{
+    background-color: rgb(248, 244, 244);
+    margin-top: 50px;
+}
+
+.upSide .upSideContent{
+    padding:50px;
+}
+
+.upSide .upSideContent .row  .rowTheme h1{
+    font-size: 30px;
+    font-weight: 900;
+    margin:0;
+}
+.upSide .upSideContent .row  .rowTheme p{
+    color: rgb(202, 201, 201);
+    margin-top:10px;
+    font-size: 20px;
+}
+
+.upSide .upSideContent .row  .rowContent h1{
+    font-size: 20px;
+    font-weight: 999;
+    
+}
+.upSide .upSideContent .row  .rowContent div{
+    margin-top: 20px; 
+}
+.upSide .upSideContent .row  .rowContent div p{
+    margin:5px;
+    margin-left: 0;
+}
+
+
+/* 脚注 */
+.end{
+    background-color: #363636; 
+    height: 50px;
+    color: #F8F8FF;
+}
+
+.end .endBottom div{
+    line-height: 50px; 
+    text-align: center;
+}
+
+
+/* 按钮hover */
